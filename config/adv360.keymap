@@ -34,7 +34,43 @@
         bindings = <&kp>, <&kp>;
     };
   };
-
+ combos {
+    combo_EQUAL {
+             timeout-ms = <50>;
+             key-positions = <31 32>;
+             bindings = <&kp EQUAL>;
+         };
+    combo_MINUS {
+             timeout-ms = <50>;
+             key-positions = <32 33>;
+             bindings = <&kp KP_MINUS>;
+         };
+    combo_PLUS {
+             timeout-ms = <50>;
+             key-positions = <30 31>;
+             bindings = <&kp KP_PLUS>;
+         };
+     combo_EXCL {
+             timeout-ms = <50>;
+             key-positions = <32 17>;
+             bindings = <&kp EXCL>;
+         };
+     combo_QMARK {
+             timeout-ms = <50>;
+             key-positions = <41 24>;
+             bindings = <&kp QMARK>;
+         };
+     combo_COLON {
+             timeout-ms = <50>;
+             key-positions = <42 43>;
+             bindings = <&kp COLON>;
+         };
+     combo_DQT {
+             timeout-ms = <50>;
+             key-positions = <41 42>;
+             bindings = <&kp DQT>;
+         };
+ }
     keymap {
         compatible = "zmk,keymap";
 
