@@ -34,44 +34,7 @@
         bindings = <&kp>, <&kp>;
     };
   };
- combos {
-    compatible = "zmk,combos";
-    combo_EQUAL {
-             timeout-ms = <50>;
-             key-positions = <31 32>;
-             bindings = <&kp EQUAL>;
-         };
-    combo_MINUS {
-             timeout-ms = <50>;
-             key-positions = <32 33>;
-             bindings = <&kp KP_MINUS>;
-         };
-    combo_PLUS {
-             timeout-ms = <50>;
-             key-positions = <30 31>;
-             bindings = <&kp KP_PLUS>;
-         };
-     combo_EXCL {
-             timeout-ms = <50>;
-             key-positions = <32 17>;
-             bindings = <&kp EXCL>;
-         };
-     combo_QMARK {
-             timeout-ms = <50>;
-             key-positions = <41 24>;
-             bindings = <&kp QMARK>;
-         };
-     combo_COLON {
-             timeout-ms = <50>;
-             key-positions = <42 43>;
-             bindings = <&kp COLON>;
-         };
-     combo_DQT {
-             timeout-ms = <50>;
-             key-positions = <41 42>;
-             bindings = <&kp DQT>;
-         };
- };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -82,7 +45,7 @@
    &kp TAB      &kp Q     &kp W     &kp E     &kp R   &kp T                             &kp LBKT                                                                                           &kp RBKT   &kp Y     &kp U      &kp I     &kp O     &kp P   &kp BSLH
    &kp ESC      &kp A     &kp S     &kp D     &kp F   &kp G            &kt LA(LC(LS(RIGHT_GUI)))  &kp LEFT_SHIFT           &kp TAB                            &kp DEL   &kp RSHIFT            &none   &kp H     &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
  &kp LSHFT      &kp Z     &kp X     &kp C     &kp V   &kp B                                                           &kp LEFT_ALT                      &kp RIGHT_ALT                                 &kp N     &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-     &mo 2  &kp GRAVE  &kp CAPS  &kp LPAR  &kp RPAR                             &kp LEFT_COMMAND       &kp SPACE  &kp LEFT_CONTROL                  &kp RIGHT_CONTROL  &lt 4 ENTER  &lt 1 BACKSPACE          &kp LBRC   &kp RBRC  &kp LBKT  &kp RBKT      &mo 2
+     &mo 2  &kp GRAVE  &kp CAPS  &kp LPAR  &kp RPAR                                    &kp SPACE    &kp LEFT_GUI  &kp LEFT_CONTROL                  &kp RIGHT_CONTROL  &lt 4 ENTER  &lt 1 BACKSPACE          &kp LBRC   &kp RBRC  &kp LBKT  &kp RBKT      &mo 2
             >;
         };
 
@@ -118,11 +81,11 @@
 
         layer_NAV {
             bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans    &trans    &trans  &trans     &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans    &trans    &trans  &trans     &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans    &trans    &trans  &trans     &trans  &trans
- &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans            &trans    &trans  &trans     &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans     &trans     &trans  &trans     &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &kp LG(C)  &kp LG(V)  &trans     &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans   &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans     &trans     &trans  &trans     &trans  &trans
+ &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans             &trans     &trans  &trans     &trans  &trans
             >;
         };
 
