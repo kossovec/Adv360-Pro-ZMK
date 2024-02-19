@@ -63,7 +63,7 @@
          };
      combo_COLON {
              timeout-ms = <50>;
-             key-positions = <42 43>;
+             key-positions = <55 42>;
              bindings = <&kp COLON>;
          };
      combo_DQT {
@@ -71,6 +71,12 @@
              key-positions = <41 42>;
              bindings = <&kp DQT>;
          };
+       combo_UNDER{
+             timeout-ms = <50>;
+             key-positions = <50 31>;
+             bindings = <&kp UNDER>;
+         };
+    
  };
 keymap {
         compatible = "zmk,keymap";
